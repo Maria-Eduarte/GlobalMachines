@@ -1,0 +1,6 @@
+C:\Users\Priscilla\Desktop\Global Machines\Global Machines\bin\Debug\Global Machines.exe.config
+C:\Users\Priscilla\Desktop\Global Machines\Global Machines\bin\Debug\Global Machines.exe
+C:\Users\Priscilla\Desktop\Global Machines\Global Machines\bin\Debug\Global Machines.pdb
+C:\Users\Priscilla\Desktop\Global Machines\Global Machines\obj\Debug\Global Machines.csprojResolveAssemblyReference.cache
+C:\Users\Priscilla\Desktop\Global Machines\Global Machines\obj\Debug\Global Machines.exe
+C:\Users\Priscilla\Desktop\Global Machines\Global Machines\obj\Debug\Global Machines.pdb
