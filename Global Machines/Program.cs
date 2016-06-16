@@ -71,6 +71,8 @@ namespace Global_Machines
                     Productos[i].nombre_proveedor = Console.ReadLine();
                     Console.Write("Digite la posicion del Producto (Nivel 1, Nivel 2, Nivel 3, Nivel 4, Nivel 5):     ");
                     Productos[i].posicion_estante = Console.ReadLine();
+                    Console.Write("Digite el precio del Producto:    ");
+                    Productos[i].precio = int.Parse(Console.ReadLine());
 
                     if (Productos[i].tipo == "Frituras" || Productos[i].tipo == "frituras")
                     {
@@ -162,6 +164,8 @@ namespace Global_Machines
                         Productos[i].nombre_proveedor = Console.ReadLine();
                         Console.Write("Digite la posicion del Producto (Nivel 1, Nivel 2, Nivel 3, Nivel 4, Nivel 5):     ");
                         Productos[i].posicion_estante = Console.ReadLine();
+                        Console.Write("Digite el precio del Producto:    ");
+                        Productos[i].precio = int.Parse(Console.ReadLine());
                         found = true;
                     }
                 }
@@ -284,12 +288,12 @@ namespace Global_Machines
             Console.WriteLine("=================================");
             Console.WriteLine("Clasificacion    ||   Cantidad");
             Console.WriteLine("---------------------------------");
-            Console.WriteLine("Frituras :           " + "|| " + contaFrituras);
+            Console.WriteLine("Frituras :          " + "|| " + contaFrituras);
             Console.WriteLine("Reposteria :         " + "|| " + contaResposteria);
             Console.WriteLine("Refrescos Gaseosos : " + "|| " + contaRefGaseoso);
             Console.WriteLine("Refrescos Naturales :" + "|| " + contaRefNatural);
             Console.WriteLine("Confiteria : "         + "|| " + contaConfiteria);
-            Console.WriteLine("    Nivel          ||         Cantidad");
+            Console.WriteLine("Nivel          ||         Cantidad");
             Console.WriteLine("Nivel 1:   " + "||  " + contanivel1);
             Console.WriteLine("Nivel 2:   " + "||  " + contanivel2);
             Console.WriteLine("Nivel 3:   " + "||  " + contanivel3);
@@ -316,21 +320,21 @@ namespace Global_Machines
             for (i = 0; i < Productos.Length; i++)
             {
                 reg = i + 1;
-                Console.WriteLine(Productos[i].codigo_articulo + "        " + "/t/t" +
+                Console.WriteLine(Productos[i].codigo_articulo + "        "  +
                     Productos[i].nombre_articulo + "       " + Productos[i].precio);
             }
             Console.WriteLine("=================================");
 
-            Console.Write("Digite su nombre");
+            Console.Write("Digite su nombre    ");
             cliente = Console.ReadLine();
 
-            Console.Write("Digite su numero de telefono");
+            Console.Write("Digite su numero de telefono     ");
             numeroTelefono = Console.ReadLine();
 
 
             while (r != 1)
             {
-                Console.Clear();
+                Console.WriteLine("  ");
                 Console.WriteLine("Venta de Productos.           ");
                 Console.Write("Que Producto desea comprar, seleccione segun el codigo a su izquierda");
                 codigo_articulo = int.Parse(Console.ReadLine());
@@ -340,9 +344,9 @@ namespace Global_Machines
                 {
                     if (codigo_articulo == Productos[i].codigo_articulo)
                     {
-                        calculo = cantidad * precio;
-                        descuento = (calculo * 0.05) - calculo;
-                        montoAPagar = (calculo - descuento) + impuestoVenta;
+                        calculo = cantidad * Productos[i].precio;
+                        descuento = 0;
+                        montoAPagar = calculo + impuestoVenta;
                         impuestoVenta = montoAPagar * 0.13;
                         Console.Write("El monto total a pagar es de " + montoAPagar);
                         Console.Write("Con cuanto desea cancelar?");
