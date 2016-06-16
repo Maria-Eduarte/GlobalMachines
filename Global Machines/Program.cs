@@ -361,14 +361,10 @@ namespace Global_Machines
                         Console.WriteLine("Cliente: " + cliente);
                         Console.WriteLine("Numero de Telefono: " + numeroTelefono);
                         Console.WriteLine("-----------------------------------");
-                        Console.WriteLine("Item-------------------------------");
-                        Console.WriteLine(Productos[i].nombre_articulo);
-                        Console.WriteLine("Cantidad---------------------------");
-                        Console.WriteLine(cantidad);
-                        Console.WriteLine("Precio---------------------------");
-                        Console.WriteLine(Productos[i].precio);
-                        Console.WriteLine("Subtotal---------------------------");
-                        Console.WriteLine(calculo);
+                        Console.WriteLine("Item-------------------------------" + Productos[i].nombre_articulo);
+                        Console.WriteLine("Cantidad---------------------------" + cantidad);
+                        Console.WriteLine("Precio---------------------------" + Productos[i].precio);
+                        Console.WriteLine("Subtotal---------------------------" + calculo);
                         Console.WriteLine("-----------------------------------");
                         Console.WriteLine("Total Orden--------------------" + calculo);
                         Console.WriteLine("Descuento---------------------" + descuento);
